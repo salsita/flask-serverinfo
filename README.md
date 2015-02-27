@@ -33,6 +33,12 @@ easy_install Flask-ServerInfo
 
 ## Changelog
 
+### 0.1.1
+
+#### Fixes
+
+- Fix package setup to not require dependencies preinstalled.
+
 ### 0.1.0
 
 #### Features
