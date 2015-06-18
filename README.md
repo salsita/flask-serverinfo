@@ -33,6 +33,13 @@ easy_install Flask-ServerInfo
 
 ## Changelog
 
+### 0.1.2
+
+#### Fixes
+
+- Fix inspecting dictionaries with non-string keys.
+- Fix package setup on Python 3.
+
 ### 0.1.1
 
 #### Fixes

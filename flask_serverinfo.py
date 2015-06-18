@@ -1,7 +1,7 @@
 """Flask server info view for inspecting server app and user requests."""
 
 __all__ = 'setup view dumps logging_info logger_info server_info JSONEncoder'.split()
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 import flask
 from flask import json, Flask, Request, Response
