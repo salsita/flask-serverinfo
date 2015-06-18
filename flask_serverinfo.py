@@ -17,7 +17,8 @@ class JSONEncoder(json.JSONEncoder):
 
     def default(self, o):
         if isinstance(o, self.inspect_types):
-            return dict((k, getattr(o, k)) for k in dir(o) if not isinstance(k, basestring) or not k.startswith('__'))
+            return dict((k, getattr(o, k)) for k in dir(o)
+                if isinstance(k, basestring) and not k.startswith('__') and not callable(getattr(o, k)))
         elif isinstance(o, MultiDict):
             return o.lists()
         elif isinstance(o, Headers):
@@ -42,9 +43,13 @@ class JSONEncoder(json.JSONEncoder):
         if cache is None:
             cache = {}
         if not isinstance(o, self.base_types):
-            if not isinstance(o, self.iter_types):
+            if isinstance(o, dict):
+                o = dict((k, o[k]) for k in o if isinstance(k, basestring))
+            elif isinstance(o, self.iter_types):
+                o = list(o)
+            else:
                 return self.replace_circular_refs(self.default(o), path, cache)
-            o = (dict if isinstance(o, dict) else list)(o)
+
             for key, value in (o.iteritems() if isinstance(o, dict) else enumerate(o)):
                 if not isinstance(value, self.base_types):
                     if id(value) in cache:
