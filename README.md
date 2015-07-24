@@ -2,13 +2,15 @@
 
 Flask server info view for inspecting server app and user requests.
 
-[![Latest Version](https://pypip.in/version/Flask-ServerInfo/badge.svg)]
+[![Version](https://badge.fury.io/gh/salsita%2Fflask-serverinfo.svg)]
+(https://github.com/salsita/flask-serverinfo/tags)
+[![PyPI package](https://badge.fury.io/py/Flask-ServerInfo.svg)]
 (https://pypi.python.org/pypi/Flask-ServerInfo/)
-[![Downloads](https://pypip.in/download/Flask-ServerInfo/badge.svg)]
+[![Downloads](https://img.shields.io/pypi/dm/Flask-ServerInfo.svg)]
 (https://pypi.python.org/pypi/Flask-ServerInfo/)
-[![Supported Python versions](https://pypip.in/py_versions/Flask-ServerInfo/badge.svg)]
+[![Supported Python versions](https://img.shields.io/pypi/pyversions/Flask-ServerInfo.svg)]
 (https://pypi.python.org/pypi/Flask-ServerInfo/)
-[![License](https://pypip.in/license/Flask-ServerInfo/badge.svg)]
+[![License](https://img.shields.io/pypi/l/Flask-ServerInfo.svg)]
 (https://pypi.python.org/pypi/Flask-ServerInfo/)
 
 
